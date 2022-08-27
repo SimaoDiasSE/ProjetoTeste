@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/painel_style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChartInventory);
+        google.charts.setOnLoadCallback(drawChartSales);
+        
+        function drawChartInventory() {
+            var data = google.visualization.arrayToDataTable([
+            ["Dia da Semana", "Nº produtos vendidos",{ role: 'annotation' }],  
+            ["Segunda", 1200 , 1200 ],
+            ["Terça", 2000 , 2000],
+            ["Quarta", 2000 , 2000],
+            ["Quinta" , 1200 , 1200],
+            ["Sexta", 1000 , 1000],
+            ["Sábado", 500 , 500],
+            ["Domingo", 1000, 1000]
+            ]);
+
+            var options = {
+                title: '',
+                curveType: 'none',
+                legend: { position: 'bottom' }
+            };
+            
+            var chart = new google.visualization.LineChart(document.getElementById('chart_d_inventory')); 
+            chart.draw(data, options);
+        }
+
+        function drawChartSales() {
+            var data = google.visualization.arrayToDataTable([
+            ["Dia da Semana", "Valor em R$",{ role: 'annotation' }],  
+            ["Segunda", 1200 , 1200 ],
+            ["Terça", 2000 , 2000],
+            ["Quarta", 2000 , 2000],
+            ["Quinta" , 1200 , 1200],
+            ["Sexta", 1000 , 1000],
+            ["Sábado", 500 , 500],
+            ["Domingo", 1000, 1000]
+            ]);
+
+            var options = {
+                title: '',
+                curveType: 'none',
+                legend: { position: 'bottom' }
+            };
+            
+            var chart = new google.visualization.LineChart(document.getElementById('chart_d_sales')); 
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#"><img src="assets/img/zeusparaomodoulofinanceiro.png">
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="navbar-nav text-light" id="accordionSidebar-1">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="painelcontroleestoque.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Painel de Controle</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="fa fa-signal"></i>
+                            <span>Controle de Estoque<br></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="financeiro.html">
+                            <i class="fas fa-table"></i>
+                            <span>Despesas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fa fa-dollar"></i>
+                            <span>Caixa</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">
+                            <i class="fa fa-archive"></i>
+                            <span>POPS</span>
+                        </a>
+                        <a class="nav-link" href="register.html">
+                            <i class="fa fa-heartbeat"></i>
+                            <span>Farmácia Clínica</span>
+                        </a>
+                        <a class="nav-link" href="table.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Recursos Humanos</span>
+                        </a>
+                        <a class="nav-link" href="index.html">
+                            <i class="fa fa-mortar-board"></i>
+                            <span>Educação em saúde</span>
+                        </a>
+                        <a class="nav-link" href="register.html">
+                            <i class="fa fa-volume-control-phone"></i>
+                            <span>Suporte</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle-1" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid"><button class="btn btn-link d-md-none rounded-circle me-3" id="sidebarToggleTop" type="button"><i class="fas fa-bars"></i></button>
+                        <ul class="navbar-nav flex-nowrap ms-auto">
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="badge bg-danger badge-counter">3+</span><i class="fas fa-bell fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-end dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header">alerts center</h6><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-primary icon-circle"><i class="fas fa-file-alt text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 12, 2019</span>
+                                                <p>A new monthly report is ready to download!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-success icon-circle"><i class="fas fa-donate text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 7, 2019</span>
+                                                <p>$290.29 has been deposited into your account!</p>
+                                            </div>
+                                        </a><a class="dropdown-item d-flex align-items-center" href="#">
+                                            <div class="me-3">
+                                                <div class="bg-warning icon-circle"><i class="fas fa-exclamation-triangle text-white"></i></div>
+                                            </div>
+                                            <div><span class="small text-gray-500">December 2, 2019</span>
+                                                <p>Spending Alert: We've noticed unusually high spending for your account.</p>
+                                            </div>
+                                        </a><a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Adeilson</span><img class="border rounded-circle img-profile" src="assets/img/avatars/avatar3.jpeg"></a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Meu perfil</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Sair</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Painel de Controle</h3>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">MÊS</button>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">JANEIRO</a><a class="dropdown-item" href="#">FEVEREIRO</a><a class="dropdown-item" href="#">MARÇO</a><a class="dropdown-item" href="#">ABRIL</a><a class="dropdown-item" href="#">MAIO</a><a class="dropdown-item" href="#">JUNHO</a><a class="dropdown-item" href="#">JULHO</a><a class="dropdown-item" href="#">AGOSTO</a><a class="dropdown-item" href="#">SETEMBRO</a><a class="dropdown-item" href="#">OUTUBRO</a><a class="dropdown-item" href="#">NOVEMBRO</a><a class="dropdown-item" href="#">DEZEMBRO</a></div>
+                        </div>
+                        <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">ANO</button>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">2022</a><a class="dropdown-item" href="#">2023</a><a class="dropdown-item" href="#">2024</a></div>
+                        </div><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#"><i class="fas fa-download fa-sm text-white-50"></i>GERAR RELATÓRIO</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Consumo mensal</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>40,000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-chart-area fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Consumo ANUAL</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>40,000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-tablets fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>PRODUTOS PERDIDOS</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>$40,000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-thumbs-down fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Quantidade em estoque atual</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>$40,000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-primary py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>Lucro bruto mensal</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>$40,000</span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-poll fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-success py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>LUCRO LÍQUIDO MENSAL</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span><span>18000</span></span></div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-donate fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>vendas mensais</span></div>
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3"></div>
+                                                </div>
+                                                <div class="text-dark fw-bold h5 mb-0"><span>1800</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-file-alt fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3 mb-4">
+                            <div class="card shadow border-start-info py-2">
+                                <div class="card-body">
+                                    <div class="row align-items-center no-gutters">
+                                        <div class="col me-2">
+                                            <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>vendas anuais</span></div>
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="text-dark fw-bold h5 mb-0 me-3"></div>
+                                                </div>
+                                                <div class="text-dark fw-bold h5 mb-0"><span>1800</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto"><i class="fas fa-file-alt fa-2x text-gray-300"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0">Quantidade vendidas diariamente</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div id="chart_d_inventory"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header d-flex justify-content-between align-items-center">
+                                    <h6 class="text-primary fw-bold m-0">Movimentação em valor financeiro diário</h6>
+                                </div>
+                                <div class="card-body">
+                                   <div id="chart_d_sales"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"><span>ZEUS HEALTH</span></div>
+                </div>
+            </footer>
+        </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/chart.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+</html>

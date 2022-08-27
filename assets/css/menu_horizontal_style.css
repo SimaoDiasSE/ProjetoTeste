@@ -1,0 +1,78 @@
+/*menu-horizontal*/
+
+#menu-horizontal{ list-style: none; padding: 0px; 
+    background-color: rgb(112, 108, 108)}
+#menu-horizontal li{ display: inline;}
+#menu-horizontal li a{ color:black; 
+    text-decoration: none; 
+     display: inline-block; 
+     transition: background 0.1s ;}
+#menu-horizontal li a:hover{ background-color: rgba(136, 204, 250, 0.938);}
+
+/*barra-de-pesquisa*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(78, 75, 75);
+    padding: 0px;
+}
+.formulario {
+    border: 1px solid rgb(19, 18, 18);
+    border-radius: 0.3em;
+    padding: 0.3em;
+}
+.formulario input, form button {
+    font-size: 1.2em;
+    border-radius: 0.2em;
+    border: none;
+    padding: 0px;
+}
+.formulario button {
+    cursor: pointer;
+    background: none;
+    color: whitesmoke;
+}
+/*menu-dropdown*/
+:root{
+    ---cor-fundo : rgb(112, 108, 108);
+    ---cor-hover : rgba(136, 204, 250, 0.938);
+    ---cor-primaria : cyan; 
+}
+.dp-menu ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.dp-menu ul{
+    background-color: var(---cor-fundo) ;
+
+}
+.dp-menu ul li {
+    display: inline;
+}
+.dp-menu ul li a {
+    color: var(---cor-primaria);
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    
+}
+.dp-menu ul li a:hover {
+    background-color: var(---cor-hover);
+}
+/*sub-menu*/
+.dp-menu ul ul{
+    display: none;
+    left: 536px;
+    position: absolute;
+   
+}
+.dp-menu ul li:hover ul{
+    display: block;
+}
+.dp-menu ul ul {
+width: 200px;
+}
+.dp-menu ul ul li a {
+    display: block;
+}

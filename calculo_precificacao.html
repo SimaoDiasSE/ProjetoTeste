@@ -1,0 +1,36 @@
+<table border="1">
+
+    <center> Precificação <br>
+    PV= preço de venda, CA= preço de aquisição, TR= tributos, CF= custos fixos
+        ML= margem de lucro(porcentagem, divida por 100 exemplo: 50/100 = 0,5)
+    </center>
+
+ 
+     <tr><th colspan="5">PV=CA+TR+CF/ML  <br> </th> </tr>
+           
+    <tr>
+
+     <td>  CA <input id="n01" type="number">  <br> </td>
+     <td>  TR <input id="n02" type="number">  <br> </td>
+     <td>  CF <input id="n03" type="number">  <br> </td>
+     <td>  ML <input id="n04" type="number">  <br> </td>
+     <td>   =<span></span> </td>
+
+     <td>  <button onclick="somar()">calcular</button> <br> </td>
+    
+    </tr>
+   </table>
+    <script>
+             
+             var n01 = document.querySelector('#n01')
+             var n02 = document.querySelector('#n02')
+             var n03 = document.querySelector('#n03')
+             var n04 = document.querySelector('#n04')
+
+             var resultado = document.querySelector('span')
+ 
+             function somar() {
+ 
+             resultado.innerHTML = (parseFloat(n01.value) + parseFloat(n02.value) + parseFloat(n03.value))/parseFloat(n04.value)
+             }
+    </script>

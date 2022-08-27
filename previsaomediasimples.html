@@ -1,0 +1,68 @@
+<html>
+  <head>
+    
+  </head>
+  <body>
+    
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<title>ZEUS</title>
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+		<link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+		<link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+		<link rel="stylesheet" href="assets/css/untitled-1.css">
+		<link rel="stylesheet" href="assets/css/untitled-2.css">
+		<link rel="stylesheet" href="assets/css/untitled-3.css">
+		<link rel="stylesheet" href="assets/css/untitled-4.css">
+		<link rel="stylesheet" href="assets/css/untitled-5.css">
+		<link rel="stylesheet" href="assets/css/table_style.css">
+		<link rel="stylesheet" href="css/controle.css">
+		<link rel="stylesheet" href="assets/css/estilos.css">
+		<script src="assets/js/funcoes.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Meses', 'Lorsatana', 'Azitromicina', 'Anfoterexina', 'Zinco', 'Hidroxido de sódio','Hidroxido de sódio','Hidroxido de sódio',  'Média Móvel'],
+          ['Janeiro',  165,      938,         522,             998,           450,      614.6, 450,      614.6],
+          ['Fevereiro',  135,      1120,        599,             1268,          288,      682, 450,      614.6],
+          ['Março',  157,      1167,        587,             807,           397,      623, 450,      614.6],
+          ['Abril',  139,      1110,        615,             968,           215,      609.4, 450,      614.6],
+          ['Maio',  136,      691,         629,             1026,          366,      569.6, 450,      614.6],
+          ['Junho',  136,      691,         629,             1026,          366,      569.6, 450,      614.6],
+          ['Julho',  136,      691,         629,             1026,          366,      569.6, 450,      614.6],
+          ['Agosto',  136,      691,         629,             1026,          366,      569.6, 450,      614.6],
+        ]);
+
+        var options = {
+          title : 'Consumo médio mensal com média móvel simples',
+          vAxis: {title: 'Consumo'},
+          hAxis: {title: 'Meses'},
+          seriesType: 'bars',
+          series: {12: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+	</head>
+	<body>
+    <div id="chart_div" style="width: 1500px; height: 800px;"></div>
+		<script src="assets/js/chart.min.js"></script>
+		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/js/bs-init.js"></script>
+		<script src="assets/js/theme.js"></script>
+	</body>
+</html>
